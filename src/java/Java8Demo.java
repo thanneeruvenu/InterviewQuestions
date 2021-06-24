@@ -1,3 +1,5 @@
+package java;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.IntStream;
@@ -11,7 +13,7 @@ public class Java8Demo {
         map.forEach((k,v)->System.out.println("{ key : "+ k+ ", value : "+ v + " }"));
 
         // find no of occurrence element in an array
-        findOccurrences(new int[]{1, 2, 1, 3, 1}, 3);
+        findOccurrences(new int[]{1, 2, 1, 3, 1}, 1);
         // map and flat map
 
         // print prime number 1 to 10 using java 8
