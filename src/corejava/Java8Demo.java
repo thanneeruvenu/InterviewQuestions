@@ -15,8 +15,11 @@ public class Java8Demo {
         // find no of occurrence element in an array
         findOccurrences(new int[]{1, 2, 1, 3, 1}, 1);
         // map and flat map
+        String [][] input = {{},{"Hello"}};
+
 
         // print prime number 1 to 10 using java 8
+
 
 
     }

@@ -21,6 +21,11 @@ public class LinkedListDemo {
 
     }
 
+    public static void reverseApproach1(){
+
+    }
+
+
     public static void findMiddleElementApproach1(LinkedList<Integer> linkedList) {
 
         //get the length of linklist and do n/2
