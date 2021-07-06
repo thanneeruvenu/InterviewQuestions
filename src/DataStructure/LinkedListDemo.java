@@ -18,10 +18,29 @@ public class LinkedListDemo {
         findMiddleElementApproach2(linkedList);
 
         // reverse elements
-
+            LinkedList.Node temp = reverseApproach1(linkedList.head);;
+            System.out.print("[");
+            while (temp != null){
+                System.out.print(temp.data);
+                temp = temp.next;
+                if(temp!=null) System.out.print(",");
+            }
+            System.out.print("]\n");
     }
 
-    public static void reverseApproach1(){
+   // recursive
+    public static LinkedList.Node reverseApproach1(LinkedList.Node head){
+        if(head==null || head.next==null) return head;
+        System.out.println("before : " +head);
+
+        LinkedList.Node node = reverseApproach1(head.next);
+       // System.out.println("Node : " + node.data);
+        System.out.println("after : " +head);
+        head.next.next = head;
+        head.next = null;
+        System.out.println("reset  : " +head);
+
+        return node;
 
     }
 
@@ -71,6 +90,14 @@ class LinkedList<T> {
         Node<T> next;
         public Node(T data) {
             this.data = data;
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "data=" + data +
+                    ", next=" + next +
+                    '}';
         }
     }
 
