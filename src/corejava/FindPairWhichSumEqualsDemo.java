@@ -1,5 +1,6 @@
 package corejava;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,6 +13,8 @@ public class FindPairWhichSumEqualsDemo {
          */
 
         System.out.println(findPairs(new int[]{1, 5, 2, 4, 3, 7,0}, 7));
+
+        approach1(new int[]{1, 5, 2, 4, 3, 7,0}, 7);
     }
 
     public static Map<Integer,Integer> findPairs(int[] input, int k) {
@@ -29,4 +32,29 @@ public class FindPairWhichSumEqualsDemo {
         //System.out.println(temp);
         return map;
     }
+
+    public static void approach1(int[] input, int k){
+
+        int[] temp = Arrays.copyOf(input,input.length);
+
+        Arrays.sort(temp);
+
+        int l = 0;
+        int r = input.length-1;
+
+        while(l<=r) {
+
+            if(temp[l] + temp[r] == k){
+                System.out.println("Pairs { "+ temp[l] + " : "+ temp[r] + " }" );
+                l++;
+                r--;
+            }else if(temp[l] + temp[r] < k){
+                l++;
+            }else {
+                r--;
+            }
+        }
+    }
+
+
 }
