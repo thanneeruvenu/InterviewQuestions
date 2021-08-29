@@ -2,7 +2,7 @@ package DesignPatterns.creational.abstractfactory;
 
 public class AbstractFactoryDemo {
     public static void main(String[] args) {
-        Application application = configureApplication("mac");
+        Application application = configureApplication("windows");
         application.paint();
     }
 
